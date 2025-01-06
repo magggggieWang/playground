@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
+<<<<<<< Updated upstream
 </script>
 
 <template>
@@ -13,6 +14,16 @@ import HelloWorld from "./components/HelloWorld.vue";
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+=======
+/// @ts-ignore
+import HeaderTop from "./components/HeaderTop.vue";
+import TravelPlan from "./components/TravelPlan.vue";
+</script>
+
+<template>
+  <HeaderTop></HeaderTop>
+  <TravelPlan />
+>>>>>>> Stashed changes
 </template>
 
 <style scoped>

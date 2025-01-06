@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
+defineProps<{ msg: string }>();
 
-defineProps<{ msg: string }>()
-
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
-  <div class="card">
+  <div
+    class="card"
+    v-motion="'custom'"
+    :initial="{ opacity: 0, y: 100 }"
+    :enter="{ opacity: 1, y: 0 }"
+    :variants="{ custom: { scale: 2 } }"
+  >
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
